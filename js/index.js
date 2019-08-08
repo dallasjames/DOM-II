@@ -55,6 +55,14 @@ image.addEventListener("dblclick", function (e) {
     image.style.width = "500px";
 });
 
-image.addEventListener("dblclick" function (e){
-    image.style.width = "1000px";
-})
+//blur and focus
+const form = document.getElementById("sign");
+
+form.addEventListener("focus", (event) => {
+  event.target.style.borderColor = "red";    
+}, true);
+
+form.addEventListener("blur", (event) => {
+  event.target.style.borderColor = "red";    
+}, true);
+

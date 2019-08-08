@@ -48,3 +48,13 @@ para.addEventListener("pointermove", (event) => {
     newP.textContent = `you touched the top heading!`
 });
 
+const image = document.querySelector("img");
+
+//dblclick
+image.addEventListener("dblclick", function (e) {
+    image.style.width = "500px";
+});
+
+image.addEventListener("dblclick" function (e){
+    image.style.width = "1000px";
+})

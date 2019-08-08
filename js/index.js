@@ -56,13 +56,21 @@ image.addEventListener("dblclick", function (e) {
 });
 
 //blur and focus
-const form = document.getElementById("sign");
+const sign = document.getElementById("sign");
 
-form.addEventListener("focus", (event) => {
-  event.target.style.borderColor = "red";    
+sign.addEventListener("focus", (event) => {
+    event.target.style.borderColor = "red";    
 }, true);
 
-form.addEventListener("blur", (event) => {
-  event.target.style.borderColor = "red";    
+sign.addEventListener("blur", (event) => {
+    event.target.style.borderColor = "red";    
 }, true);
 
+//Submit
+function logSubmit(event) {
+    log.textContent = `Time stamp: ${event.timeStamp}`;
+    event.preventDefault();
+  }
+  
+const log = document.getElementById('log');
+sign.addEventListener('submit', logSubmit);
